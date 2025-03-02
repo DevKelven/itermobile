@@ -1,5 +1,6 @@
 import React from "react";
 import { TouchableOpacity,Text,StyleSheet } from "react-native";
+import {Link} from 'expo-router';
 
 export function Login(){
     return (
@@ -12,7 +13,7 @@ export function Login(){
 export function Cadastro(){
     return (
         <TouchableOpacity style={[estilo.container_cadastro]}>
-            <Text style={[estilo.text_cadastro]}>Cadastro</Text>
+              <Link style={[estilo.text_cadastro]} href={"/Cadastro"}>Cadastro</Link>
         </TouchableOpacity>
     );
 }

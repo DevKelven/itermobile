@@ -1,42 +1,30 @@
 import { Text, View,StyleSheet,Image,TextInput} from "react-native";
-import { Cadastro, Login } from "./componetes/Button";
+import { Cadastro, Login } from "../componetes/Button";
 
 
-export default function login() {
+export default function cadastro() {
   return (
     <View style={[estilo.container]}>
       <View style={[estilo.image]}>
         <Image
           style={{width:264, height:111}}
-          source={require('../assets/images/LOGO.png')}
+          source={require('../../assets/images/LOGO.png')}
         />
+
+
+        <Text>APENAS CADASTROOO</Text>
       </View>
 
+    
 
-    <View style={[estilo.containerInput]}>
-        <View>
-          <Text style={{color:"#ffffff",fontSize:16,transform:[{translateX: 15}]}}>
-            CPF:
-          </Text>
-            <TextInput style={[estilo.input]} placeholder="Digite seu CPF" />         
-        </View>
-
-        <View>
-          <Text style={{color:"#ffffff",fontSize:16,transform:[{translateX: 15}]}}>
-            Senha:
-          </Text>
-            <TextInput style={[estilo.input]} placeholder="Digite sua Senha" />
-        </View>
-      </View>
       {/*Botão* */}
-      <View style={[estilo.fixToText]}>    
+      <View style={[estilo.fixToText]}>
             <Cadastro />
             <Login />
         </View>
 
       <Text style={[estilo.senha]}>Esqueceu a senha?</Text>
     </View>
-
   );
 }
 
@@ -52,7 +40,7 @@ const estilo = StyleSheet.create({
       backgroundColor:'#212529',
     },
     image:{
-      flex:0, position:"absolute", top: 100
+      flex:0,
     },
     input: {
       height: 40,
@@ -60,6 +48,7 @@ const estilo = StyleSheet.create({
       borderWidth: 1,
       padding: 10,
       width:268,
+      
       backgroundColor:"#ffffff",
       borderRadius:12,
     },
@@ -67,15 +56,10 @@ const estilo = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between',
       gap:50,
-      transform: [{translateY:100}]
     },
     senha:{
       color:"#8B8B8B",
       borderBottomWidth:1,
-      borderBottomColor:"#8B8B8B",
-      transform: [{translateY:150}]
-    },
-    containerInput:{
-        transform: [{translateY:50}]
+      borderBottomColor:"#8B8B8B"
     }
 })
