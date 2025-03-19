@@ -5,7 +5,8 @@ import {Link} from 'expo-router';
 export function Login(){
     return (
         <TouchableOpacity style={[estilo.container]}>
-            <Text style={[estilo.text]}>Login</Text>
+            {/* <Text style={[estilo.text]}>Login</Text> */}
+            <Link style={[estilo.text]} href={"./Inicio"}>Login</Link>
         </TouchableOpacity>
     );
 }
@@ -13,7 +14,7 @@ export function Login(){
 export function Cadastro(){
     return (
         <TouchableOpacity style={[estilo.container_cadastro]}>
-              <Link style={[estilo.text_cadastro]} href={"/Cadastro"}>Cadastro</Link>
+              <Link style={[estilo.text_cadastro]} href={"/Cadastro"}>Cadastrar</Link>
         </TouchableOpacity>
     );
 }
